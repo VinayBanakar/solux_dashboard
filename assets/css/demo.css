@@ -68,3 +68,6 @@
 .table-upgrade td:nth-child(3){
     text-align: center;
 }
+.table td, th{
+   text-align: center;   
+}
