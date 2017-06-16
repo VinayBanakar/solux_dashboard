@@ -714,8 +714,8 @@
     	var dataSales = {
 		  labels: ['1 June', '2 June', '3 June', '4 June', '5 June', '6 June', '7 June', '8 June', '9 June', '10 June', '11 June'],
 		  series: [
-		  	[6.5, 6.6, 8.9, 8.9, 5.3, 5.5, 8.5, 9.2, 8.3, 7.3, 8.6],
-		    [5.2, 6.3, 7.5, 8.2, 3.4, 5.5, 6.7, 8.9, 7.1, 6.2, 4.5],
+		  	[828.85, 802.57, , 855.20, 811.44 ,861.6 ,917.4 , 893.28, 814.16, 882.91,895.37],
+		    [790, 725, 755, 725, 780, 790, 723, 799, 806, 854, 820],
 		    
 		  ]
 		};
@@ -723,8 +723,8 @@
 		var dataSalesPanel1 = {
 		  labels: ['1 June', '2 June', '3 June', '4 June', '5 June', '6 June', '7 June', '8 June', '9 June', '10 June', '11 June'],
 		  series: [
-		  	[6.5, 6.6, 8.9, 8.9, 5.3, 5.5, 8.5, 9.2, 8.3, 7.3, 8.6],
-		    [5.2, 6.3, 7.5, 8.2, 3.4, 5.5, 6.7, 8.9, 7.1, 6.2, 4.5],
+		  	[266.49, 272.90,263.53,264.37, 301.7,310.13, 317.87,260.45,302.8, 294.25, 266.49],
+		    [256, 260, 244, 256, 280, 288, 298, 243, 288, 278, 233],
 		    
 		  ]
 		};
@@ -732,16 +732,25 @@
 		var dataSalesPanel2 = {
 		  labels: ['1 June', '2 June', '3 June', '4 June', '5 June', '6 June', '7 June', '8 June', '9 June', '10 June', '11 June'],
 		  series: [
-		  	[6.5, 6.6, 8.9, 8.9, 5.3, 5.5, 8.5, 9.2, 8.3, 7.3, 8.6],
-		    [5.2, 6.3, 7.5, 8.2, 3.4, 5.5, 6.7, 8.9, 7.1, 6.2, 4.5],
+		  	[263.83, 284.46, 266.70, 316.46, 267.26,309.08, 266.87, 276.2, 272.23,282.040, 298.52],
+		    [256, 260, 244, 296, 240, 288, 228, 243, 258, 238, 273],
 		    
 		  ]
 		};
 
+        var dataSalesPanel3 = {
+          labels: ['1 June', '2 June', '3 June', '4 June', '5 June', '6 June', '7 June', '8 June', '9 June', '10 June', '11 June'],
+          series: [
+            [298.52,265.2, 304.9, 260.60,292.60, 298.18, 308.54, 277.46,307.8, 319.08, 310.13],
+            [276, 260, 284, 256, 280, 288, 298, 243, 288, 298, 303],
+            
+          ]
+        };
+
 		var optionsSales = {
 		  lineSmooth: false,
 		  low: 0,
-		  high: 10,
+		  high: 1000,
 		  showArea: true,
 		  height: "245px",
 		  axisX: {
@@ -754,6 +763,22 @@
 		  showPoint: false,
 		};
 
+        var optionsSalesPanels = {
+          lineSmooth: false,
+          low: 0,
+          high: 320,
+          showArea: true,
+          height: "245px",
+          axisX: {
+            showGrid: false,
+          },
+          lineSmooth: Chartist.Interpolation.simple({
+            divisor: 3
+          }),
+          showLine: true,
+          showPoint: false,
+        };
+
 		var responsiveSales = [
 		  ['screen and (max-width: 640px)', {
 		    axisX: {
@@ -765,9 +790,9 @@
 		];
 
 		Chartist.Line('#chartPower', dataSales, optionsSales, responsiveSales);
-		Chartist.Line('#chartPowerPanel1', dataSalesPanel1, optionsSales, responsiveSales);
-		Chartist.Line('#chartPowerPanel2', dataSalesPanel2, optionsSales, responsiveSales);
-		Chartist.Line('#chartPowerPanel3', dataSalesPanel1, optionsSales, responsiveSales);
+		Chartist.Line('#chartPowerPanel1', dataSalesPanel1, optionsSalesPanels, responsiveSales);
+		Chartist.Line('#chartPowerPanel2', dataSalesPanel2, optionsSalesPanels, responsiveSales);
+		Chartist.Line('#chartPowerPanel3', dataSalesPanel3, optionsSalesPanels, responsiveSales);
 
 		$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 		    $(e.currentTarget.hash).find('.ct-chart').each(function(el, tab) {
@@ -779,9 +804,30 @@
     	var data = {
 		  labels: ['1 June', '2 June', '3 June', '4 June', '5 June', '6 June', '7 June', '8 June', '9 June', '10 June', '11 June'],
 		  series: [
-		    [220, 200, 180, 215, 150, 110, 190, 200, 210, 207, 198],
+		    [140.32, 120.31, 130.11, 148.14, 119.2, 137.0, 132.75, 128, 147,123, 158],
 		  ]
 		};
+
+        var data_p1 = {
+          labels: ['1 June', '2 June', '3 June', '4 June', '5 June', '6 June', '7 June', '8 June', '9 June', '10 June', '11 June'],
+          series: [
+            [48.13, 38.53, 48.32, 53.50,35.3, 47.92, 37.09, 44.96, 45.51, 53.85],
+          ]
+        };
+
+        var data_p2 = {
+          labels: ['1 June', '2 June', '3 June', '4 June', '5 June', '6 June', '7 June', '8 June', '9 June', '10 June', '11 June'],
+          series: [
+            [43.44, 51.05, 37.0, 47.97,47.782906, 45.9, 54.627,47.02, 48.0,43.85],
+          ]
+        };
+
+        var data_p3 = {
+          labels: ['1 June', '2 June', '3 June', '4 June', '5 June', '6 June', '7 June', '8 June', '9 June', '10 June', '11 June'],
+          series: [
+            [48.74, 50.72, 44.73,46.66,36.08, 43.1,41.0, 36.02, 53.85, 49.85],
+          ]
+        };
 
 		var options = {
 		    seriesBarDistance: 10,
@@ -803,9 +849,9 @@
 		];
 
 		Chartist.Line('#chartVoltage', data, options, responsiveOptions);
-		Chartist.Line('#chartVoltagePanel1', data, options, responsiveOptions);
-		Chartist.Line('#chartVoltagePanel2', data, options, responsiveOptions);
-		Chartist.Line('#chartVoltagePanel3', data, options, responsiveOptions);
+		Chartist.Line('#chartVoltagePanel1', data_p1, options, responsiveOptions);
+		Chartist.Line('#chartVoltagePanel2', data_p2, options, responsiveOptions);
+		Chartist.Line('#chartVoltagePanel3', data_p3, options, responsiveOptions);
 		$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 		    $(e.currentTarget.hash).find('.ct-chart').each(function(el, tab) {
 		      tab.__chartist__.update();
@@ -816,9 +862,30 @@
     	var data = {
 		  labels: ['1 June', '2 June', '3 June', '4 June', '5 June', '6 June', '7 June', '8 June', '9 June', '10 June', '11 June'],
 		  series: [
-		    [5, 7, 3, 2, 5, 7, 3, 2, 5, 7, 3],
+		    [6, 5.53, 6.1, 4.59,5.79,5.29, 4.99,5.89, 6.39, 6.19, 6.79],
 		  ]
 		};
+
+        var data_p1 = {
+          labels: ['1 June', '2 June', '3 June', '4 June', '5 June', '6 June', '7 June', '8 June', '9 June', '10 June', '11 June'],
+          series: [
+            [17.73, 17.88, 19.46, 17.12,22.23,,20.10, 20.97,19.36, 18.0, 21.867, 19.4],
+          ]
+        };
+
+        var data_p2 = {
+          labels: ['1 June', '2 June', '3 June', '4 June', '5 June', '6 June', '7 June', '8 June', '9 June', '10 June', '11 June'],
+          series: [
+            [17.73, 17.88, 19.46, 17.12,22.23,,20.10, 20.97,19.36, 18.0, 21.867, 19.4],
+          ]
+        };
+
+        var data_p3 = {
+          labels: ['1 June', '2 June', '3 June', '4 June', '5 June', '6 June', '7 June', '8 June', '9 June', '10 June', '11 June'],
+          series: [
+            [17.73, 17.88, 19.46, 17.12,22.23,,20.10, 20.97,19.36, 18.0, 21.867, 19.4],
+          ]
+        };
 
 		var options = {
 		    seriesBarDistance: 10,
