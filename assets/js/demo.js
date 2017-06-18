@@ -117,10 +117,24 @@ demo = {
             ['Geetha, ID: 432, ITPL', 12.986077, 77.735907, 3],
             ['Vijay, ID: 123, Majestic', 12.976664, 77.571256, 2],
             ['Neel, ID: 343, Indiranagar', 12.971891, 77.641154, 1],
-            ['Akash, ID: 522, Banashankari', 12.925453, 77.546757]
+            ['Akash, ID: 522, Banashankari', 12.925453, 77.546757],
+            ['Rajat Sinha, ID: 522, Malleshwaram', 13.004784, 77.564926],
+            ['Rajat Sinha, ID: 522, Rajajinagar', 12.991682, 77.553397],
+            ['Aditya Ranganath, ID: 522, Hoskote', 13.074956, 77.798538],
+            ['Aditya Ranganath, ID: 522, Anekal', 12.707810, 77.689470],
+            ['Aditya Ranganath, ID: 522, Whitefield', 12.965771, 77.736013],
+            ['Aditya Ranganath, ID: 522, Brookefield', 12.972886, 77.713034],
+            ['Gopal Varma, ID: 522, Domlur', 12.965568, 77.630986],
+            ['Gopal Varma, ID: 522, HAL 2nd Stage', 12.966435, 77.647174],
+            ['Vijay Seetaram, ID: 522, Ramanagar', 12.720387, 77.288097],
+            ['Vijay Seetaram, ID: 522, Bidadi', 12.798906, 77.388060],
+            ['T Nagaraj, ID: 522, Devanahalli', 13.240744, 77.712664],
+            ['T Nagaraj, ID: 522, Chikballapur', 13.315636, 75.775241],
+            ['Sharath S, ID: 522, Dabbaspete', 13.228435, 77.240395],
+            ['Sharath S, ID: 522, Nelamangala', 13.092406, 77.412556],
             ];
         var mapOptions = {
-          zoom: 12,
+          zoom: 10,
           center: new google.maps.LatLng(12.97, 77.59),
           scrollwheel: false, //we disable de scroll over the map, it is a really annoing when you scroll through page
           styles: [{"featureType":"water","stylers":[{"saturation":43},{"lightness":-11},{"hue":"#0088ff"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":99}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#808080"},{"lightness":54}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#ece2d9"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#ccdca1"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#767676"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#b8cb93"}]},{"featureType":"poi.park","stylers":[{"visibility":"on"}]},{"featureType":"poi.sports_complex","stylers":[{"visibility":"on"}]},{"featureType":"poi.medical","stylers":[{"visibility":"on"}]},{"featureType":"poi.business","stylers":[{"visibility":"simplified"}]}]
